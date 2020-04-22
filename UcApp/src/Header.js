@@ -48,29 +48,12 @@ function Header (props){
       <div class="row align-items-center">
 
         <div class="col-lg-8 col-xl-9">
-          <div class="h2 text-font--serif text-color--blue mt-24" align='left'>Nombre</div>
-          <div class="text-color--gray p-size--lg" align='left'>Bajada</div>
+          <div class="h2 text-font--serif text-color--blue mt-24" align='left'>Rick and Morty</div>
+          <div class="text-color--gray p-size--lg" align='left'>All the characters</div>
         </div>
       </div>
       <ul class="uc-navbar_nav">
-        <li class="nav-item">
-          <a href="#" class="uc-btn btn-inline">Item 1</a>
-        </li>
-        <li class="nav-item">
-          <a href="#" class="uc-btn btn-inline">Item 2</a>
-        </li>
-        <li class="nav-item">
-          <a href="#" class="uc-btn btn-inline">Item 3</a>
-        </li>
-        <li class="nav-item">
-          <a href="#" class="uc-btn btn-inline">Item 4</a>
-        </li>
-        <li class="nav-item">
-          <a href="#" class="uc-btn btn-inline">Item 5</a>
-        </li>
-        <li class="nav-item">
-          <a href="#" class="uc-btn btn-inline">Item 6</a>
-        </li>
+      
       </ul>
     </div>
     <div class="uc-navbar_mobile d-block d-lg-none">
@@ -83,14 +66,7 @@ function Header (props){
           Menú
         </a>
       </div>
-      <div class="uc-navbar_mobile-content" dataToggle="collapseMobileNav3" dataOpen="false" >
-        <div class="uc-navbar_mobile-list">
-          <a href="#" class="list-item">Item 1</a>
-          <a href="#" class="list-item">Item 2</a>
-          <a href="#" class="list-item">Item 3</a>
-          <a href="#" class="list-item">Item 4</a>
-        </div>
-      </div>
+
     </div>
   </nav>
 </header>

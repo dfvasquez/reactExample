@@ -7,8 +7,9 @@ function App() {
   return (
     <div className="App">
       <Header className='uc-header'/>
-      <Table className='uc-table'/>
-
+      <div className='container'>
+        <Table className='uc-table'/>
+      </div>
     </div>
   );
 }
