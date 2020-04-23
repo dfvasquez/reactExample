@@ -1,7 +1,7 @@
 import React from 'react';
-import './App.css';
-import Table from './Table.js'
-import Header from './Header.js'
+import './assets/css/App.css';
+import Header from './views/characters/components/Header.jsx';
+import Characters from './views/characters/containers/Characters.jsx'
 
 
 class App extends React.Component {
@@ -11,7 +11,7 @@ class App extends React.Component {
     <div className="App">
       <Header className='uc-header'/>
       <div className='container'>
-        <Table />
+        <Characters/>
       </div>
     </div>
   );
