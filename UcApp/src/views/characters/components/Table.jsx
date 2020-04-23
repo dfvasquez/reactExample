@@ -9,6 +9,10 @@ const Table = (props) => {
       <th style={{backgroundColor:'#173F8A'}}> Nombre </th>
       <th style={{backgroundColor:'#173F8A'}}> Estado</th>
       <th style={{backgroundColor:'#173F8A'}}> Especie</th>
+      <th style={{backgroundColor:'#173F8A'}}> Género</th>
+      <th style={{backgroundColor:'#173F8A'}}> Origen</th>
+      <th style={{backgroundColor:'#173F8A'}}> Ubicación</th>
+
 
   </tr>
   </thead>
@@ -19,6 +23,9 @@ const Table = (props) => {
     <td>{x.name}</td>
     <td>{x.status}</td>
     <td>{x.species}</td>
+    <td>{x.gender}</td>
+    <td>{x.origin.name}</td>
+    <td>{x.location.name}</td>
       </tr>
   )}
   </tbody>

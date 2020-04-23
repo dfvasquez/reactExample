@@ -48,7 +48,7 @@ function Header (props){
 
         <div class="col-lg-8 col-xl-9">
           <div class="h2 text-font--serif text-color--blue mt-24" align='left'>Rick and Morty</div>
-          <div class="text-color--gray p-size--lg" align='left'>All the characters</div>
+          <div class="text-color--gray p-size--lg" align='left'>Todos los personajes</div>
         </div>
       </div>
       <ul class="uc-navbar_nav">

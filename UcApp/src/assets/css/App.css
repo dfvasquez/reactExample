@@ -13,3 +13,11 @@
   background-color:'#173F8A' !important;
 }
 
+a:hover {
+  cursor: pointer;
+}
+
+.container2 {
+  margin-top: 50px;
+}
+
