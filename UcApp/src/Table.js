@@ -1,38 +1,51 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import axios from 'axios'
 
-function Table (props){
+
+
+class Table extends React.Component{
+  constructor() {
+    super()
+    this.state = {
+      characters: [],
+    }
+  }
+
+  componentDidMount(){
+    axios.get('https://rickandmortyapi.com/api/character/')
+      .then(res =>{
+        this.setState({
+          characters: res.data.results,
+        })
+      })
+  }
+
+render(){
   return(
     <div align='center'>
-    <table className={props.className} >
+    <table className='uc-table' >
   <thead >
   <tr >
-      <th style={{backgroundColor:'#173F8A'}}> Hora </th>
-      <th style={{backgroundColor:'#173F8A'}}>Sección</th>
+      <th style={{backgroundColor:'#173F8A'}}> Nombre </th>
+      <th style={{backgroundColor:'#173F8A'}}> Estado</th>
+      <th style={{backgroundColor:'#173F8A'}}> Especie</th>
+
   </tr>
   </thead>
   <tbody>
-  <tr>
-      <td><strong>9:00 - 9:30</strong></td>
-      <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
-  </tr>
-  <tr>
-      <td><strong>9:00 - 9:30</strong></td>
-      <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut justo non eros convallis rhoncus. Nunc sit amet cursus felis. Aliquam ultricies lacus ut mollis placerat.</td>
-  </tr>
-  <tr>
-      <td><strong>9:00 - 9:30</strong></td>
-      <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
-  </tr>
-  <tr>
-      <td><strong>9:00 - 9:30</strong></td>
-      <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut justo non eros convallis rhoncus. Nunc sit amet cursus felis. Aliquam ultricies lacus ut mollis placerat.</td>
-  </tr>
+
+  {this.state.characters.map(x =>
+      <tr>
+    <td>{x.name}</td>
+    <td>{x.status}</td>
+    <td>{x.species}</td>
+      </tr>
+  )}
   </tbody>
 </table>
-
     </div>
   )
 }
-
+}
 export default Table
