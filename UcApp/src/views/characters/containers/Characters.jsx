@@ -9,7 +9,7 @@ class Characters extends React.Component{
   constructor() {
     super()
     this.state = {
-      characters: [2],
+      characters: [],
       prev: '',
       actual: 'https://rickandmortyapi.com/api/character/',
       next: ''
@@ -17,7 +17,6 @@ class Characters extends React.Component{
   }
 
   componentDidMount(){
-    console.log("AQUI");
     axios.get(this.state.actual)
       .then(res =>{
         this.setState({
@@ -30,9 +29,7 @@ class Characters extends React.Component{
 
   handlePageClick  = data => {
     let nextPage = data.selected + 1;
-    console.log(data.selected);
     let url = this.state.actual + '?page=' + nextPage;
-    console.log(url);
     axios.get(url)
       .then(res =>{
         this.setState({
@@ -45,23 +42,31 @@ class Characters extends React.Component{
       });       
   }
 
+
 render(){
   return(
-    <div align='center'>
+    <div align='center'>   
     <Table ch={this.state.characters}/>
     <ReactPaginate
-        //previousLabel={'previous'}
-        //nextLabel={'next'}
-        //breakLabel={'...'}
-        //breakClassName={'break-me'}
+        previousLabel={'<'}
+        nextLabel={'>'}
+        breakLabel={'...'}
+        breakClassName={"uc-pagination_pages page-item"}
+        breakLinkClassName={"uc-pagination uc-pagination_pages page-item page-link"}
         pageCount={25}
         marginPagesDisplayed={2}
-        pageRangeDisplayed={5}
+        pageRangeDisplayed={10}
         onPageChange={this.handlePageClick.bind(this)}
-        //containerClassName={'pagination'}
-        //subContainerClassName={'pages pagination'}
-        //activeClassName={'active'}
-    />
+        containerClassName={"uc-pagination uc-pagination_pages"}
+        pageClassName={"page-item"}
+        pageLinkClassName={"page-link"}
+        activeClassName={"page-item active"}
+        activeLinkClassName={"page-item active page-link"}
+        previousClassName={"page-item blue-uc"}
+        previousLinkClassName={"page-link blue-uc"}
+        nextClassName={"page-item blue-uc"}
+        nextLinkClassName={"page-link blue-uc"}
+    /> 
     </div>
   )
 }

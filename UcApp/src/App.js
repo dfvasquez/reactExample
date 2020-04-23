@@ -10,7 +10,7 @@ class App extends React.Component {
   return (
     <div className="App">
       <Header className='uc-header'/>
-      <div className='container'>
+      <div className='container2'>
         <Characters/>
       </div>
     </div>
