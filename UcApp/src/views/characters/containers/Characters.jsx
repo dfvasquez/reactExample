@@ -45,6 +45,7 @@ class Characters extends React.Component{
       });       
   }
 
+  
 render(){
   return(
     <div align='center'>
