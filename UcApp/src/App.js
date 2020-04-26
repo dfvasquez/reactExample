@@ -7,6 +7,7 @@ import {
 import './assets/css/App.css';
 import Header from './views/layout/Header.jsx';
 import Footer from './views/layout/Footer.jsx';
+import Topics from './views/topics/Topics.jsx';
 import Characters from './views/characters/containers/Characters.jsx'
 
 export default function App() {
@@ -15,7 +16,7 @@ export default function App() {
   return (
     <Router>
       <div>
-      <Footer className="uc-footer"/>
+
       <Switch>
             <Route exact path="/">
             <div className="App">
@@ -32,6 +33,9 @@ export default function App() {
             <Route path="/footer">
               <Footer className="uc-footer"/>
             </Route>
+            <Route path="/topics">
+              <Topics />
+          </Route>
       </Switch>
       </div>
       
@@ -40,3 +44,5 @@ export default function App() {
     
   );
 }
+
+// Documentación React Router: https://reacttraining.com/react-router/web/example/basic
